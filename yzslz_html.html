@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>云在水流斋</title>
+    <script type="text/javascript" src="./log_yzlsz.js"></script>
+    <script type="text/javascript" src="./jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+      function ShowHideDiv() {
+            $('.y_title').mouseover(function(e) {
+               var txt = $(this).text();
+              $("#hideDiv").text(txt);
+              $("#hideDiv").css({ "position": "absolute", "top": e.pageY, "left": e.pageX}).show();
+            });
+            $('.y_title').mouseout(function() {
+                $("#hideDiv").hide();
+            })
+
+      }
+
+      $(document).ready(function() {
+          ShowHideDiv();
+      });
+
+      function DrawLine()
+      {
+        var can1 = document.getElementById('canvas1');
+        var context1 = can1.getContext("2d");
+        context1.beginPath();
+        context1.moveTo(50,10);
+        context1.lineTo(50,280);
+        context1.moveTo(50,280);
+        context1.lineTo(1280,280);
+        context1.closePath();
+        context1.stroke();
+      }
+
+    </script>
+
+
+  </head>
+  <body style="text-align:center">
+    <p  class="y_title">云在水流斋</p>
+    <div id='hideDiv' ></div>
+  </body>
+</html>
