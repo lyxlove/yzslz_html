@@ -35,12 +35,52 @@
         context1.stroke();
       }
 
-    </script>
+    function CheckIntNum() {
+      var val = $("#numBox").val();
+      var reg = /^[0-9]{0,4}$/;
+        if (!reg.test(val)) {
+            alert('不是整数');
+            return;
+            }
+        alert('是整数');
+    }
 
+    function GetURLParm() {
+
+    }
+
+
+    </script>
+<style media="screen">
+.button {
+  width: 100px;
+  height:30px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  overflow: hidden;
+}
+span
+{
+  color: red;
+}
+
+span:hover
+{
+  color: blue;
+}
+</style>
 
   </head>
   <body style="text-align:center">
     <p  class="y_title">云在水流斋</p>
     <div id='hideDiv' ></div>
+
+    <a class="button">云在水流斋</a>
+
+    <span>云在水流斋</span>
+    <input type="text" id="numBox" name="" value=""><button onclick="CheckIntNum()">判断数字</button>
+    <button onclick="GetURLParm()">获取URL参数</button>
   </body>
 </html>
