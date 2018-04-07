@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src=".\y_js\jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href=".\y_src\bootstrap\css\bootstrap.css">
+    <script type="text/javascript" src=".\y_src\bootstrap\js\bootstrap.js"></script>
+      <style type="text/css">
+      .dd_table {
+  width: 100%;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+  .dd_table tr {
+      text-align: center;
+      height: 30px;
+      font-size: 15px;
+  }
+
+  .dd_table td {
+
+      border: 1px solid;
+  }
+  .dd_table thead tr {
+      background: RGB(209,231,246);
+      height: 40px;
+      font-size: 15px;
+  }
+      </style>
+  </head>
+  <body>
+      <button type="button" class="btn btn-info" name="button">Hello World!</button>
+      <h1>H1</h1>
+      <h2>H2</h2>
+        <h3>H3</h3>
+          <h4>H4</h4>
+            <h5>H5</h5>
+              <h6>H6</h6>
+              <a class="h1" href="#">这是一个标题</a>
+              <small>小标题</small>、
+
+
+
+
+              <table id="m_table" class="dd_table">
+                <thead>
+                  <tr>
+                    <td>一</td>
+                    <td>二</td>
+                    <td>三</td>
+                    <td>四</td>
+                    <td>五</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>22</td>
+                    <td>33</td>
+                    <td>44</td>
+                    <td>55</td>
+                  </tr>
+                  <tr>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>444</td>
+                    <td>555</td>
+                  </tr>
+                  <tr>
+                    <td>1111</td>
+                    <td>2222</td>
+                    <td>3333</td>
+                    <td>4444</td>
+                    <td>5555</td>
+                  </tr>
+                </tbody>
+              </table>
+
+  </body>
+</html>
+<script type="text/javascript">
+  function MergeT(tableId,rowNum,colNum,rowSpanNum,colSpanNum) {
+      var mTable = document.getElementById(tableId);
+      mTable.rows[rowNum].cells[colNum].rowSpan = rowSpanNum;
+
+      for(var i = rowNum + 1;i < rowNum+ rowSpanNum;i ++){
+          mTable.rows[i].cells[colNum].style.display='none';
+      }
+
+      mTable.rows[rowNum].cells[colNum].colSpan = colSpanNum;
+      for (var j = colNum+1; j < colNum + colSpanNum;  j++) {
+          for (var k = rowNum; k < rowNum+rowSpanNum; k++) {
+              mTable.rows[k].cells[j].style.display='none';
+          }
+      }
+  }
+
+
+ $(document).ready(function() {
+    MergeT('m_table',1,1,3,3);
+
+  //alert(GetGold(19.2921));
+
+ });
+
+
+ function ConF() {
+   if(confirm(1))
+   {
+     window.close();
+   }
+   else {
+      alert(2);
+   }
+ }
+
+ function GetGold(price) {
+    var gold =  parseInt(price);
+    price = (price - gold) * 100;
+    var silver =parseInt(price);
+    price = (price - silver) * 100;
+    var copper = parseInt(price);
+    return gold+"金"+silver+"银"+copper+"铜";
+   }
+</script>
