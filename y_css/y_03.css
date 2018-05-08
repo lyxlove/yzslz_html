@@ -1,4 +1,219 @@
 nav
 {
   background: #ccc;
+  height: 50px;
+}
+
+ nav ul
+ {
+   list-style: none;
+   margin: 0;
+   float: right;
+ }
+
+
+nav ul li,nav .logo
+{
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 20px;
+}
+
+nav .logo
+{
+  float: left;
+}
+
+nav ul li a
+{
+  line-height: inherit;
+  text-decoration: none;
+  display: inline-block;
+  height: inherit;
+}
+
+
+
+#banner
+{
+  background: #777;
+  height: 700px;
+}
+
+#banner .inner
+{
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 160px;
+}
+
+#banner .inner h1
+{
+  margin: 0;
+}
+
+ul
+{
+  margin: 0;
+}
+
+
+.green-section
+{
+  text-align: center;
+  background-color: #089DB0;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.icon-group
+{
+  margin-top: 20px;
+}
+.icon-group .icon
+{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: #0D6F7c;
+  transform: rotate(45deg);
+  margin: 20px;
+}
+
+.wrapper
+{
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.hr
+{
+  width: 100%;
+  height: 2px;
+  margin: 20px auto;
+}
+
+.green-section .hr
+{
+  background-color: #078494;
+  width: 60%;
+}
+
+.gray-section
+{
+  background: #252F34;
+  color: #fff;
+}
+
+.gray-section .img-section
+{
+  width: 45%;
+}
+
+.img-section img
+{
+  width: 100%;
+}
+
+.gray-section .text-section
+{
+  width: 55%;
+}
+
+.article-preview > div
+{
+  float: left;
+
+}
+
+.article-preview::after
+{
+  content: '';
+  display: block;
+  clear: both;
+
+}
+
+.text-section
+{
+  position: relative;
+  top: 69px;
+  left: 50px;
+}
+
+.text-section h2
+{
+  margin-bottom: 20px;
+}
+
+.text-section p
+{
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.text-section > *
+{
+  max-width: 90%;
+}
+
+.article-preview:nth-child(odd)
+{
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+.purple-section
+{
+  background: #3F3965;
+  color: #fff;
+}
+
+.purple-section .heading-wrapper
+{
+  text-align: center;;
+}
+
+.purple-section .hr
+{
+  background: #373259;
+  width: 60%;
+}
+
+.card
+{
+  float: left;
+  width: 50%;
+ min-height: 300px;
+}
+
+.clearfix::after
+{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+footer
+{
+  background: #333;
+  color: #fff;
+  text-align: center;
+  min-height: 200px;
+}
+
+ul.share-group
+{
+  display:block;
+  width: 1080px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.share-group li
+{
+  display: inline-block;
+  padding: 10px;
 }

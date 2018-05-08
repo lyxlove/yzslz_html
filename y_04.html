@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+    .wrapper
+    {
+      max-width: 1080px;
+      margin: 0 auto;
+      text-align: center;
+      border:solid 1px red;
+    }
+      .wrapper::after
+      {
+          content: '';
+          display: block;
+          clear: both;
+
+      }
+
+
+      .card
+      {
+        display: block;
+        float: left;
+        width: 49.8%;
+        border:solid 1px #211931;
+        min-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="wrapper">
+          <div class="card">
+                <p>My house is perfect. By great good fortune I have found a housekeeper no less to my mind, a low-voiced, light-footed woman of discreet age, strong and deft enough to render me all the service I require, and not afraid of loneliness.</p>
+          </div>
+          <div class="card">
+                <p>My house is perfect. By great good fortune I have found a housekeeper no less to my mind, a low-voiced, light-footed woman of discreet age, strong and deft enough to render me all the service I require, and not afraid of loneliness.</p>
+          </div>
+      </div>
+  </body>
+</html>
