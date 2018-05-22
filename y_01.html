@@ -3,22 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script type="text/javascript" src="./y_js/jquery-3.2.1.js"></script>\
+    <script type="text/javascript" src="./y_js/jquery-3.2.1.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-            
-      });
-    </script>
-    <style media>
+        if (typeof(Storage)!=="undefined") {
+              alert("浏览器支持 localStorage");
+          }else{
+            alert("浏览器不支持 localStorage");
 
-    </style>
+          }
+
+          if (window.sessionStorage) {
+              // 浏览器支持 sessionStorage
+          }else{
+              // 不支持
+          }
+      });
+
+
+
+
+    </script>
   </head>
   <body>
-      <section>
-        <div class="page">
-          rem随着html:font-size变化
-        </div>
-      </section>
 
   </body>
 </html>

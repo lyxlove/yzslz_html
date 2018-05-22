@@ -1,0 +1,36 @@
+.header
+{
+  width: 100%;
+  height: 77px;
+  position: relative;
+  margin-top: 10px;
+  z-index: -9;
+  border: solid 1px red;
+}
+
+
+.sidebar
+{
+  height: 0px;
+  width: 280px;
+  border: solid 1px red;
+  float: left;
+}
+
+.content
+{
+  margin-left: 280px;
+  width: auto;
+  height: 800px;
+  position: relative;
+  border: solid 1px red;
+}
+
+.content-header
+{
+  display: block;
+  border: solid 1px red;
+  margin-top: -38px;
+  height: 50px;
+  z-index: 20;
+}

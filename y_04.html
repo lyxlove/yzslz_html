@@ -16,7 +16,7 @@
       {
           content: '';
           display: block;
-          
+
 
       }
 
@@ -40,5 +40,19 @@
                 <p>My house is perfect. By great good fortune I have found a housekeeper no less to my mind, a low-voiced, light-footed woman of discreet age, strong and deft enough to render me all the service I require, and not afraid of loneliness.</p>
           </div>
       </div>
+      <button type="button" onclick="MacInfo()" name="button">1111</button>
   </body>
 </html>
+<script type="text/javascript">
+function MacInfo(){
+var locator =new ActiveXObject ("WbemScripting.SWbemLocator");
+var service = locator.ConnectServer(".");
+var properties = service.ExecQuery("Select * from Win32_NetworkAdapterConfiguration Where IPEnabled =True");
+var e =new Enumerator (properties);
+{
+      var p = e.item();
+     var mac = p.MACAddress;
+     alert(mac)
+}
+}
+</script>
