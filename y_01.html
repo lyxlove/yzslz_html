@@ -20,12 +20,17 @@
           }
       });
 
-
+        function HideP() {
+            $('#head-text').slideUp();
+            $('#head-text').slideDown();
+        }
 
 
     </script>
   </head>
   <body>
 
+    <button onclick="HideP()">隐藏P</button>
+    <p id="head-text">相见不如怀念</p>
   </body>
 </html>

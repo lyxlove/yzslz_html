@@ -3,29 +3,71 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="./y_css/y_05.css">
+    <script type="text/javascript" src="./y_js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="./y_src/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./y_css/y_05.css">
   </head>
   <body>
     <div class="header">
 
     </div>
 
-    <div class="sidebar">
+    <div id="sidebar" class="sidebar">
         <ul>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
+          <li><a><span>首页</span></a></li>
+          <li><a><span>Item</span></a></li>
+          <li><a><span>Item</span></a></li>
+          <li class="submenu"><a><span>Item</span></a>
+            <ul style="display:none">
+              <li class="submenu"><a><span>Item1</span></a>
+                <ul style="display:none">
+                  <li><a><span>Item2</span></a></li>
+                  <li><a><span>Item2</span></a></li>
+                  <li><a><span>Item2</span></a></li>
+                  <li><a><span>Item2</span></a></li>
+                </ul>
+              </li>
+              <li><a><span>Item1</span></a></li>
+              <li><a><span>Item1</span></a></li>
+              <li><a><span>Item1</span></a></li>
+            </ul>
+          </li>
+          <li><a><span>Item</span></a></li>
         </ul>
     </div>
 
-    <div class="content">
-        <div class="content-header">
-
+    <div id="content">
+        <div class="content-header" style="background:#fff;">
         </div>
     </div>
 
   </body>
 </html>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.submenu > a').click(function(e){
+
+    e.preventDefault();
+    //获取当前点击节点下得ul节点和父节点
+    var submenu = $(this).siblings('ul');
+    var li = $(this).parent('li');
+
+    //获取所有子节点和他们得父节点
+    var submenus = $('#sidebar > li.submenu > ul');
+    var submenus_parents = $('#sidebar > li.submenu');
+
+    if(li.hasClass('open')){
+      submenu.slideUp();
+      li.removeClass('open');
+    }
+    else {
+      submenus.slideUp();
+      submenu.slideDown();
+      submenus_parents.removeClass('open');
+      li.addClass('open');
+    }
+
+
+  });
+});
+</script>
